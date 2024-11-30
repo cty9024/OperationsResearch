@@ -22,7 +22,7 @@ The goal is to develop a linear programming model to determine the monthly produ
 * **J:** Products $\lbrace1,2,...,3412\rbrace$
 * **T:** Months in the planning horizon $\lbrace1,2,...,24\rbrace$
 ##### Parameters:
-* $C_{i}$: Installed capacity for factory $i$
+* $C_{i}$: Installed capacity for factory ${i}$
 𝑖
 i
 *

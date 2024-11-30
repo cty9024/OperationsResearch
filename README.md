@@ -32,9 +32,40 @@ The goal is to develop a linear programming model to determine the monthly produ
 * $I_{jt}$: Inventory of product $j$ in month $t$
 ### Linear Programming Model
 ##### Objective Function:
-$
+$$
 Z = \sum_{j \in J} \sum_{t \in T} S_j K_{jt} 
     - 0.5 \sum_{i \in I} \sum_{j \in J} \sum_{t \in T} S_j X_{ijt} 
     - \sum_{j \in J} \sum_{t \in T} I_{jt} 
     - 2 \sum_{j \in J} \sum_{t \in T} S_j B_{jt}
-$
+$$
+##### Constraints:
+1. Inventory Balance:
+$$ I_{jt} = I_{j, t-1} + \sum_{i \in I} X_{ijt} - B_{j, t-1} - D_{jt} + B_{jt}, \quad \forall j \in J, \forall t \in T$$
+2. Capacity Limitation:
+$$\sum_{j \in J} X_{ijt} \leq C_i, \quad \forall i \in I, \forall t \in T$$
+3. Backorder Definition:
+$$B_{jt} = D_{jt} - \sum_{i \in I} X_{ijt}, \quad \forall j \in J, \forall t \in T$$
+4. Sales Limitation:
+$$K_{jt} \leq I_{j, t-1} + \sum_{i \in I} X_{ijt}, \quad \forall j \in J, \forall t \in T$$
+5. Initial Inventory and Backorders:
+$$ I_{j0} = 0, \quad B_{j0} = 0, \quad \forall j \in J$$
+6. Non-Negativity:
+$$X_{ijt}, K_{jt}, B_{jt}, I_{jt} \geq 0, \quad \forall i \in I, \forall j \in J, \forall t \in T$$
+
+Code Explanation
+The code is implemented in C# using the IBM CPLEX Optimization Studio. It includes the following steps:
+
+Data Input: Reads CSV files (Demand.csv, Sales.csv, and Capacity.csv) into lists for processing.
+Variable Definition: Uses INumVar and ILinearNumExpr to define decision variables for production, inventory, sales, and backorders.
+Objective Function: Constructs the objective function by iterating through data and applying the relevant formulas.
+Constraints: Implements constraints (1) through (6) using loops and CPLEX APIs.
+Model Solving: Solves the linear programming model and exports it to Result.lp.
+Files in This Repository
+Program.cs: Source code for the linear programming model.
+practice.csproj: Project configuration file.
+Demand.csv: Forecasted demand data.
+Sales.csv: Product sales price data.
+Capacity.csv: Factory capacity data.
+Result.lp: Exported CPLEX model (generated upon execution).
+README.md: Project documentation (this file).
+

@@ -19,10 +19,12 @@ The goal is to develop a linear programming model to determine the monthly produ
 ### Sets and Variables
 ##### Sets:
 * **I:** Factories $\lbrace1, 2, ..., 6\rbrace$
-* **J:** Products
-* **T:** Months in the planning horizon
+* **J:** Products $\lbrace1,2,...,3412\rbrace$
+* **T:** Months in the planning horizon $\lbrace1,2,...,24\rbrace$
 ##### Parameters:
-* $C_{i}$
+* $C_{i}$: Installed capacity for factory $i$
+𝑖
+i
 *
 *
 

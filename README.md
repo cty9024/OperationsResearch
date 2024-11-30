@@ -18,7 +18,7 @@ The goal is to develop a linear programming model to determine the monthly produ
 4. No depreciation for finished goods.
 ### Sets and Variables
 ##### Sets:
-* I: Factories $\left\{1, 2, \dots, 6\right\}$
+* I: Factories $\text{\{1, 2, ..., 6\}}$
 
 
 

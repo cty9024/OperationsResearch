@@ -18,7 +18,7 @@ The goal is to develop a linear programming model to determine the monthly produ
 4. No depreciation for finished goods.
 ### Sets and Variables
 ##### Sets:
-* **I:** Factories $\brace1, 2, ..., 6\brace$
+* **I:** Factories $\lbrace1, 2, ..., 6\rbrace$
 * **J:** Products
 * **T:** Months in the planning horizon
 ##### Parameters:

@@ -55,20 +55,20 @@ $$X_{ijt}, K_{jt}, B_{jt}, I_{jt} \geq 0, \quad \forall i \in I, \forall j \in J
 
 ## Code Explanation
 The code is implemented in **C#** using the **IBM CPLEX Optimization Studio**. It includes the following steps:
-1. **Data Input:** Reads CSV files (Demand.csv, Sales.csv, and Capacity.csv) into lists for processing.
-2. **Variable Definition:** Uses INumVar and ILinearNumExpr to define decision variables for production, inventory, sales, and backorders.
+1. **Data Input:** Reads CSV files (`Demand.csv`, `Sales.csv`, and `Capacity.csv`) into lists for processing.
+2. **Variable Definition:** Uses `INumVar` and `ILinearNumExpr` to define decision variables for production, inventory, sales, and backorders.
 3. **Objective Function:** Constructs the objective function by iterating through data and applying the relevant formulas.
 4. **Constraints:** Implements constraints (1) through (6) using loops and CPLEX APIs.
-5. **Model Solving:** Solves the linear programming model and exports it to Result.lp.
+5. **Model Solving:** Solves the linear programming model and exports it to `Result.lp`.
 
 ## Files in This Repository
-* Program.cs: Source code for the linear programming model.
-* practice.csproj: Project configuration file.
-* Demand.csv: Forecasted demand data.
-* Sales.csv: Product sales price data.
-* Capacity.csv: Factory capacity data.
-* Result.lp: Exported CPLEX model (generated upon execution).
-* README.md: Project documentation (this file).
+* `Program.cs`: Source code for the linear programming model.
+* `practice.csproj`: Project configuration file.
+* `Demand.csv`: Forecasted demand data.
+* `Sales.csv`: Product sales price data.
+* `Capacity.csv`: Factory capacity data.
+* `Result.lp`: Exported CPLEX model (generated upon execution).
+* `README.md`: Project documentation (this file).
 
 ## Output Analysis
 The solution includes:

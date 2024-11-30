@@ -23,14 +23,18 @@ The goal is to develop a linear programming model to determine the monthly produ
 * **T:** Months in the planning horizon $\lbrace1,2,...,24\rbrace$
 ##### Parameters:
 * $C_{i}$: Installed capacity for factory $i$
-
-*
-*
-
-
-$\[
+* $S_{j}$: Sales price per unit for product $j$
+* $D_{jt}$: Demand for product $j$ in month $t$
+##### Decision Variables:
+* $X_{ijt}$: Production quantity of product $j$ using factory $i$ in month $t$
+* $K_{jt}$: Sales quantity of product $j$ in month $t$
+* $B_{jt}$: Backorder quantity of product $j$ in month $t$
+* $I_{jt}$: Inventory of product $j$ in month $t$
+### Linear Programming Model
+##### Objective Function:
+$\
 Z = \sum_{j \in J} \sum_{t \in T} S_j K_{jt} 
     - 0.5 \sum_{i \in I} \sum_{j \in J} \sum_{t \in T} S_j X_{ijt} 
     - \sum_{j \in J} \sum_{t \in T} I_{jt} 
     - 2 \sum_{j \in J} \sum_{t \in T} S_j B_{jt}
-\]$
+\$

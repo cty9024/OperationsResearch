@@ -40,7 +40,7 @@ Z = \sum_{j \in J} \sum_{t \in T} S_j K_{jt}
 $$
 ##### Constraints:
 1. Inventory Balance:
-$$ I_{jt} = I_{j, t-1} + \sum_{i \in I} X_{ijt} - B_{j, t-1} - D_{jt} + B_{jt}, \quad \forall j \in J, \forall t \in T$$
+$$I_{jt} = I_{j, t-1} + \sum_{i \in I} X_{ijt} - B_{j, t-1} - D_{jt} + B_{jt}, \quad \forall j \in J, \forall t \in T$$
 2. Capacity Limitation:
 $$\sum_{j \in J} X_{ijt} \leq C_i, \quad \forall i \in I, \forall t \in T$$
 3. Backorder Definition:

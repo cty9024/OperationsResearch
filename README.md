@@ -48,7 +48,7 @@ $$B_{jt} = D_{jt} - \sum_{i \in I} X_{ijt}, \quad \forall j \in J, \forall t \in
 4. Sales Limitation:
 $$K_{jt} \leq I_{j, t-1} + \sum_{i \in I} X_{ijt}, \quad \forall j \in J, \forall t \in T$$
 5. Initial Inventory and Backorders:
-$$ I_{j0} = 0, \quad B_{j0} = 0, \quad \forall j \in J$$
+$$I_{j0} = 0, \quad B_{j0} = 0, \quad \forall j \in J$$
 6. Non-Negativity:
 $$X_{ijt}, K_{jt}, B_{jt}, I_{jt} \geq 0, \quad \forall i \in I, \forall j \in J, \forall t \in T$$
 

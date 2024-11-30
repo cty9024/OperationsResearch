@@ -10,7 +10,19 @@ This repository contains the implementation of a linear programming model to ass
 ## Project Overview
 ### Problem Statement
 The goal is to develop a linear programming model to determine the monthly production quantities for over 3,000 products across six factories with distinct capacities and technologies. The objective is to maximize total profit, calculated as:
-Total Sales - Production Costs - Inventory Costs - Backorder Costs
+**Total Sales - Production Costs - Inventory Costs - Backorder Costs**
+##### Key Assumptions
+1. Initial inventory is zero.
+2. Backorders are allowed.
+3. Monthly production cannot exceed factory capacities (no overtime or outsourcing).
+4. No depreciation for finished goods.
+### Sets and Variables
+##### Sets:
+* I: Factories $${1,2,...,6}$$
+
+
+
+
 $\[
 Z = \sum_{j \in J} \sum_{t \in T} S_j K_{jt} 
     - 0.5 \sum_{i \in I} \sum_{j \in J} \sum_{t \in T} S_j X_{ijt} 

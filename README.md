@@ -9,7 +9,7 @@ This repository contains the implementation of a linear programming model to ass
 
 ## Project Overview
 ### Problem Statement
-The goal is to develop a linear programming model to determine the monthly production quantities for over 3,000 products across six factories with distinct capacities and technologies. The objective is to maximize total profit, calculated as:
+The goal is to develop a linear programming model to determine the monthly production quantities for over 3,000 products across six factories with distinct capacities and technologies. The objective is to maximize total profit, calculated as:  
 **Total Sales - Production Costs - Inventory Costs - Backorder Costs**
 ##### Key Assumptions
 1. Initial inventory is zero.
@@ -18,7 +18,8 @@ The goal is to develop a linear programming model to determine the monthly produ
 4. No depreciation for finished goods.
 ### Sets and Variables
 ##### Sets:
-* I: Factories $\text{\{1, 2, ..., 6\}}$
+* I: Factories $ \left\{1, 2, \dots, 6\right\} $
+
 
 
 

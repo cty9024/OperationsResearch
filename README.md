@@ -32,9 +32,9 @@ The goal is to develop a linear programming model to determine the monthly produ
 * $I_{jt}$: Inventory of product $j$ in month $t$
 ### Linear Programming Model
 ##### Objective Function:
-$$
+$
 Z = \sum_{j \in J} \sum_{t \in T} S_j K_{jt} 
     - 0.5 \sum_{i \in I} \sum_{j \in J} \sum_{t \in T} S_j X_{ijt} 
     - \sum_{j \in J} \sum_{t \in T} I_{jt} 
     - 2 \sum_{j \in J} \sum_{t \in T} S_j B_{jt}
-$$
+$

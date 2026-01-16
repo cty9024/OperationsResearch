@@ -1,7 +1,7 @@
 # Operations Research (I) Midterm Project
 
 **Course:** Operations Research (I)  
-**Instructor:** David Martens  
+**Instructor:** Prof. Sheng-I Chen  
 **Semester:** Academic Year 2021, First Semester (Sep. 2021 - Jan. 2022)
 
 This repository contains the implementation of a linear programming model to assist in creating a master production schedule for a semiconductor manufacturing company. The project focuses on maximizing profits while meeting production constraints, inventory requirements, and customer demands.
